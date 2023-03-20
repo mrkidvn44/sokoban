@@ -1,9 +1,12 @@
 DFS: 
 r, r, d, l, l, l, l, u, R, R, l, l, d, r, r, r, r, u, L, r, d, l, l, U, U, U, d, d, r, r, d, l, l, l, l, u, u, u, u, r, R, l, l, d, d, d, r, r, r, r, u, u, u, L, L, 
 Number of moves: 55
+Time to calculate: 0.009062051773071289
 BFS: 
 d, l, l, u, R, d, r, U, U, U, d, d, r, r, u, u, u, l, L, 
 Number of moves: 19
+Time to calculate: 0.00951075553894043
 UCS: 
 d, l, l, u, R, d, r, U, U, U, d, d, r, r, u, u, u, l, L, 
 Number of moves: 19
+Time to calculate: 0.010510921478271484

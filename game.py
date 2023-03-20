@@ -109,13 +109,14 @@ class Game:
         return nb_missing_target == 0
     """AUTO FOR DFS"""
     def auto_move_DFS(self):
-        strategy = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
+        strategy, cal_time = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
         with open("assets/sokobanSolver/Solverlevel_" + str(self.index_level) + "_DFS" + ".txt", 'w+') as solver_file:
              for listitem in strategy:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write(str(len(strategy)))
+             solver_file.write('\nNumber of moves: ' + str(len(strategy)))
+             solver_file.write('\nTime to calculate: ' + str(cal_time) + '\n')
         if strategy is not None:
             try:
                 _thread.start_new_thread( move, ("Thread-1", 2, strategy) )
@@ -125,12 +126,13 @@ class Game:
     """AUTO FOR BFS"""
     def auto_move_BFS(self):
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
-        strategy = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
+        strategy, cal_time = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
         with open("assets/sokobanSolver/Solverlevel_" + str(self.index_level) + "_BFS" +".txt", 'w+') as solver_file:
              for listitem in strategy:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write(str(len(strategy)))
+             solver_file.write('\nNumber of moves: ' + str(len(strategy)))
+             solver_file.write('\nTime to calculate: ' + str(cal_time) + '\n')
         if strategy is not None:
             try:
                 _thread.start_new_thread( move, ("Thread-1", 2, strategy) )
@@ -141,11 +143,12 @@ class Game:
     def auto_move_UCS(self):
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
         #strategy = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
-        strategy = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
+        strategy, cal_time = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
         with open("assets/sokobanSolver/Solverlevel_" + str(self.index_level) + "_UCS" + ".txt", 'w+') as solver_file:
              for listitem in strategy:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write(str(len(strategy)))
+             solver_file.write('\nNumber of moves: ' + str(len(strategy)))
+             solver_file.write('\nTime to calculate: ' + str(cal_time) + '\n')
         if strategy is not None:
             try:
                 _thread.start_new_thread( move, ("Thread-1", 2, strategy) )
@@ -154,23 +157,25 @@ class Game:
 
     """AUTO FOR ALL ALGORITHM WITHOUT MOVING IN GAME"""
     def auto_move_all(self):
-        strategy_dfs = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
-        strategy_bfs = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
-        strategy_ucs = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
+        strategy_dfs, time_dfs = get_move(self.level.structure[:-1], self.level.position_player, 'dfs')
+        strategy_bfs, time_bfs = get_move(self.level.structure[:-1], self.level.position_player, 'bfs')
+        strategy_ucs, time_ucs = get_move(self.level.structure[:-1], self.level.position_player, 'ucs')
         with open("assets/sokobanSolver/Solverlevel_" + str(self.index_level) + ".txt", 'w+') as solver_file:
              solver_file.write('DFS: \n')
              for listitem in strategy_dfs:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write('\nNumber of moves: ' + str(len(strategy_dfs)) + '\n')
+             solver_file.write('\nNumber of moves: ' + str(len(strategy_dfs)))
+             solver_file.write('\nTime to calculate: ' + str(time_dfs) + '\n')
 
              solver_file.write('BFS: \n')
              for listitem in strategy_bfs:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write('\nNumber of moves: ' + str(len(strategy_bfs)) + '\n')
+             solver_file.write('\nNumber of moves: ' + str(len(strategy_bfs)))
+             solver_file.write('\nTime to calculate: ' + str(time_bfs) + '\n')
 
              solver_file.write('UCS: \n')
              for listitem in strategy_ucs:
                  solver_file.write('%s, ' % listitem)
-             solver_file.write('\nNumber of moves: ' + str(len(strategy_ucs)) + '\n')
-
+             solver_file.write('\nNumber of moves: ' + str(len(strategy_ucs)))
+             solver_file.write('\nTime to calculate: ' + str(time_ucs) + '\n')
 
