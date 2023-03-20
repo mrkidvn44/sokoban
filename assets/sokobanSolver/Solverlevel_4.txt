@@ -1,0 +1,9 @@
+DFS: 
+r, r, r, d, l, l, l, l, L, r, r, r, r, r, d, l, l, l, l, l, l, l, u, R, R, R, R, 
+Number of moves: 27
+BFS: 
+l, l, l, d, R, R, R, 
+Number of moves: 7
+UCS: 
+l, l, l, d, R, R, R, 
+Number of moves: 7

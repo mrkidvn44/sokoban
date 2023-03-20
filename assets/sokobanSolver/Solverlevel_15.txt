@@ -1,0 +1,9 @@
+DFS: 
+r, r, d, l, d, L, r, u, r, u, l, l, D, l, D, l, u, r, r, r, d, L, r, u, r, u, l, l, d, l, l, d, R, D, D, r, d, L, r, u, l, u, u, l, u, r, r, r, d, L, r, u, r, u, l, l, d, l, l, d, R, d, d, r, d, l, L, r, r, u, l, u, u, l, u, r, r, r, d, L, r, u, r, u, l, l, d, l, l, d, R, d, d, r, d, l, l, d, l, l, u, R, u, R, l, d, l, d, r, r, U, r, U, r, d, l, l, l, u, R, l, d, r, r, r, u, L, U, d, r, d, l, l, l, u, R, l, d, r, r, r, u, L, u, U, l, u, R, R, R, l, l, l, d, r, d, d, r, d, l, l, l, u, R, l, d, r, r, r, u, L, u, u, l, u, r, r, r, d, L, r, u, l, l, D, D, D, r, d, L, L, d, l, l, u, R, u, R, l, d, l, d, r, r, U, r, U, r, d, l, l, l, u, R, l, d, r, r, r, u, L, U, d, r, d, l, l, l, u, R, l, d, r, r, r, u, L, u, U, l, u, R, l, d, r, d, d, r, d, l, l, l, u, R, l, d, r, r, U, U, U, r, r, u, u, l, D, r, d, L, r, u, l, L, D, D, D, r, d, L, L, r, r, u, l, l, l, D, r, d, L, 
+Number of moves: 291
+BFS: 
+r, d, d, L, r, u, u, l, D, l, D, D, D, r, d, L, L, d, l, l, u, R, u, R, l, d, d, r, U, r, U, U, U, l, u, R, R, R, d, L, u, l, D, D, D, r, d, L, L, d, l, l, u, R, u, R, l, d, d, r, U, r, U, U, U, l, u, R, d, d, d, d, l, l, u, R, d, r, U, U, U, r, r, u, u, l, D, r, d, L, u, L, D, D, D, r, d, L, L, u, l, D, r, d, L, 
+Number of moves: 105
+UCS: 
+r, d, d, L, r, u, u, l, D, l, D, D, D, r, d, L, L, d, l, l, u, R, u, R, l, d, d, r, U, r, U, U, U, l, u, R, R, R, d, L, u, l, D, D, D, r, d, L, L, d, l, l, u, R, u, R, l, d, d, r, U, r, U, U, U, l, u, R, d, d, d, d, l, l, u, R, d, r, U, U, U, r, r, u, u, l, D, r, d, L, u, L, D, D, D, r, d, L, L, u, l, D, r, d, L, 
+Number of moves: 105
